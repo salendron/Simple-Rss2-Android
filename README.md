@@ -3,8 +3,8 @@ Simple-Rss2-Android
 
 A really simple RSS 2.0 Parser Library for Android. For easier use it also includes an asynchronous call to get feeds in the background and nofies the UI thread using a callback object.
 
-== Example: == 
-`````javascript
+Example:
+`````java
 SimpleRss2Parser parser = new SimpleRss2Parser("http://pingeb.org/feed", 
 	new SimpleRss2ParserCallback() {
 		@Override
