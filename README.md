@@ -1,9 +1,9 @@
 Simple-Rss2-Android
 ===================
 
-A really simple RSS 2.0 Parser Library for Android. For easier use it also includes an asynchronous call to get feeds in the background and nofies the UI thread using a callback object.
+A really simple RSS 2.0 Parser Library for Android. It includes an asynchronous call to get feeds in the background and than nofifies the UI thread using a callback object.
 
-You can either just download the *.jar file and incluide it in your project or clone the whole repository which contains the whole project as an Android App Project with Demo-Activity.
+You can either just download the *.jar file and include it in your project or clone the whole repository which contains the library project as an Android App Project with Demo-Activity.
 
 Example:
 `````java
