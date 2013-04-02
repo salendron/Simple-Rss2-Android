@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/etFeedUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Feed Url"
+        android:text="http://pingeb.org/feed"
+        android:inputType="textUri"
+        android:ems="10" >
+    </EditText>
+
+    <Button
+        android:id="@+id/btnLoad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load RSS Feed!" />
+
+    <ListView
+        android:id="@+id/lvFeedItems"
+        android:layout_width="match_parent"
+        android:layout_height="0sp" 
+        android:layout_weight="1">
+    </ListView>
+
+</LinearLayout>
