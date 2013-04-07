@@ -81,6 +81,16 @@ public class SimpleRss2Parser extends SimpleFeedParser {
                 currentMessage.setDescription(body);
             }
         });
+        item.getChild("http://purl.org/rss/1.0/modules/content/", "encoded").setEndTextElementListener(new EndTextElementListener(){
+            public void end(String body) {
+                currentMessage.setContent(body);
+            }
+        });
+        item.getChild(CONTENT).setEndTextElementListener(new EndTextElementListener(){
+            public void end(String body) {
+                currentMessage.setContent(body);
+            }
+        });
         item.getChild(PUB_DATE).setEndTextElementListener(new EndTextElementListener(){
             public void end(String body) {
                 currentMessage.setDate(body);

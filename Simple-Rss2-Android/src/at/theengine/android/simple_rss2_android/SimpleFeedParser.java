@@ -9,6 +9,7 @@ public abstract class SimpleFeedParser implements FeedParser {
 
     static final String PUB_DATE = "pubDate";
     static final  String DESCRIPTION = "description";
+    static final  String CONTENT = "content";
     static final  String LINK = "link";
     static final  String TITLE = "title";
     static final  String ITEM = "item";

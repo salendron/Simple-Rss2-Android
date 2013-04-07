@@ -119,7 +119,7 @@ public class MainActivity extends Activity {
                     }
                 	
                 	if (tvDescription != null) {
-                    	tvDescription.setText(o.getDescription());
+                    	tvDescription.setText(o.getContent());
                     }
                 	
                 	if (tvLnk != null) {

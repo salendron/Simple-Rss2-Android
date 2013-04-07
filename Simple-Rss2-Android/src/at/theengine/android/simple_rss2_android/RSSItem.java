@@ -7,7 +7,16 @@ public class RSSItem implements Comparable<RSSItem>, Copyable<RSSItem>{
     private String title;
     private URL link;
     private String description;
+    private String content;
     private String date;
+    
+    public void setContent(String content){
+    	this.content = content;
+    }
+    
+    public String getContent(){
+    	return this.content;
+    }
     
     public void setTitle(String title){
     	this.title = title;
@@ -73,5 +82,6 @@ public class RSSItem implements Comparable<RSSItem>, Copyable<RSSItem>{
 		dest.setDescription(description);
 		dest.setLink(link.toExternalForm());
 		dest.setDate(date);
+		dest.setContent(content);
 	}
 }
