@@ -19,7 +19,7 @@ SimpleRss2Parser parser = new SimpleRss2Parser("http://pingeb.org/feed",
 		public void onError(Exception ex) {
 			Toast.makeText(mContext, ex.getMessage(), Toast.LENGTH_SHORT).show();
 		}
-	};
+	}
 );
 parser.parseAsync();
 `````
