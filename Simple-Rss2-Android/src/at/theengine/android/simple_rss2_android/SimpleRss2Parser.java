@@ -1,16 +1,14 @@
 package at.theengine.android.simple_rss2_android;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import android.content.Context;
 import android.os.AsyncTask;
 import android.sax.Element;
 import android.sax.EndElementListener;
 import android.sax.EndTextElementListener;
 import android.sax.RootElement;
 import android.util.Xml;
-import android.widget.ArrayAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SimpleRss2Parser extends SimpleFeedParser {
 
@@ -96,6 +94,13 @@ public class SimpleRss2Parser extends SimpleFeedParser {
                 currentMessage.setDate(body);
             }
         });
+        channel.getChild(IMAGE[0]).getChild(IMAGE[1]).setEndTextElementListener(new EndTextElementListener() {
+            @Override
+            public void end(String body) {
+                currentMessage.setThumbnail(body);
+            }
+        });
+
         try {
             Xml.parse(this.getInputStream(), Xml.Encoding.UTF_8, root.getContentHandler());
         } catch (Exception e) {

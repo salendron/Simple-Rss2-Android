@@ -9,6 +9,7 @@ public class RSSItem implements Comparable<RSSItem>, Copyable<RSSItem>{
     private String description;
     private String content;
     private String date;
+    private String thumbnail;
     
     public void setContent(String content){
     	this.content = content;
@@ -53,6 +54,14 @@ public class RSSItem implements Comparable<RSSItem>, Copyable<RSSItem>{
     public void setDate(String date) {
         this.date = date;
     }
+
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
     
     @Override
     public boolean equals(Object obj) {
@@ -83,5 +92,6 @@ public class RSSItem implements Comparable<RSSItem>, Copyable<RSSItem>{
 		dest.setLink(link.toExternalForm());
 		dest.setDate(date);
 		dest.setContent(content);
+		dest.setThumbnail(thumbnail);
 	}
 }
